@@ -101,7 +101,7 @@ function starter() {
     document.getElementById("testc").style.backgroundColor = "hsl(" + chrisCleaningColor + "," + colorSat + "%," + colorLight + "%)";
     document.getElementById("testd").style.backgroundColor = "hsl(" + josieCleaningColor + "," + colorSat + "%," + colorLight + "%)";
 
-    //checkboxes
+    /*/checkboxes
 
     //mom
     document.getElementById("50").style.backgroundColor = "hsl(" + momCookingColor + "," + colorSat + "%," + colorLight + "%)";
@@ -165,11 +165,13 @@ function starter() {
     document.getElementById("79b").style.backgroundColor = "hsl(" + chrisCleaningColor + "," + colorSat + "%," + colorLight + "%)";
     document.getElementById("89b").style.backgroundColor = "hsl(" + josieCleaningColor + "," + colorSat + "%," + colorLight + "%)";
 
+    */
+
+    //weeds
     document.getElementById("weedsa").style.backgroundColor = "hsl(" + momCleaningColor + "," + colorSat + "%," + colorLight + "%)";
     document.getElementById("weedsb").style.backgroundColor = "hsl(" + robbieCleaningColor + "," + colorSat + "%," + colorLight + "%)";
     document.getElementById("weedsc").style.backgroundColor = "hsl(" + chrisCleaningColor + "," + colorSat + "%," + colorLight + "%)";
     document.getElementById("weedsd").style.backgroundColor = "hsl(" + josieCleaningColor + "," + colorSat + "%," + colorLight + "%)";
-
 
 
     i++;
@@ -345,6 +347,8 @@ function starter() {
         break;
 
     }
+
+
 
 
 

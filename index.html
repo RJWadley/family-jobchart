@@ -16,11 +16,37 @@
 <![endif]-->
   <link href="style.css" rel="stylesheet" type="text/css">
   <script src="script.js"></script>
+  <script>
+    var toggleVisible = function(elementIn, classIn) {
 
+      var element = document.getElementById(elementIn);
+
+      var x = document.getElementById(elementIn).headers;
+      console.log(x)
+
+      if (element.className != classIn + " done") {
+        element.className = classIn + " done";
+        console.log("Element " + element.innerHTML + " has been crossed off. 😌");
+      } else {
+        element.className = classIn;
+        console.log("Element " + element.innerHTML + " has been uncrossed. ☹️");
+        element.color = "black";
+      }
+
+
+
+    }
+  </script>
 </head>
 
 <body id="body" class="">
+  <script language="JavaScript">
+    window.onbeforeunload = confirmExit;
 
+    function confirmExit() {
+      return "You have attempted to leave this page. Are you sure?";
+    }
+  </script>
   <div id="loader-wrapper">
     <div id="loader"></div>
 
@@ -31,166 +57,168 @@
 
 
   <table>
+
     <tr>
-      <th colspan="2" class="mom" id="20">Mom and Dad</th>
-      <th colspan="2" class="robbie" id="21">Robbie</th>
-      <th colspan="2" class="chris" id="22">Chris</th>
-      <th colspan="2" class="josie" id="23">Josie</th>
+      <th class="mom" id="20">Mom and Dad</th>
+      <th class="robbie" id="21">Robbie</th>
+      <th class="chris" id="22">Chris</th>
+      <th class="josie" id="23">Josie</th>
     </tr>
     <tr>
-      <td class="momcooking" id="1">Loading
+      <td class="momcooking" id="1" onclick="toggleVisible(1,'momcooking')">Loading
       </td>
-      <td id="50"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecooking" id="2">Loading</td>
-      <td id="60"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscooking" id="3">Loading</td>
-      <td id="70"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecooking" id="4">Loading</td>
-      <td id="80"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <!-- checkmark <td id="50"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecooking" id="2" onclick="toggleVisible(2,'robbiecooking')">Loading</td>
+      <!-- checkmark <td id="60"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscooking" id="3" onclick="toggleVisible(3,'chriscooking')">Loading</td>
+      <!-- checkmark <td id="70"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecooking" id="4" onclick="toggleVisible(4,'josiecooking')">Loading</td>
+      <!-- checkmark <td id="80"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcooking" id="5">Loading</td>
-      <td id="51"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecooking" id="6">Loading</td>
-      <td id="61"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscooking" id="7">Loading</td>
-      <td id="71"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecooking" id="8">Loading</td>
-      <td id="81"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcooking" id="5" onclick="toggleVisible(5,'momcooking')">Loading</td>
+      <!-- checkmark <td id="51"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecooking" id="6" onclick="toggleVisible(6,'robbiecooking')">Loading</td>
+      <!-- checkmark <td id="61"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscooking" id="7" onclick="toggleVisible(7,'chriscooking')">Loading</td>
+      <!-- checkmark <td id="71"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecooking" id="8" onclick="toggleVisible(8,'josiecooking')">Loading</td>
+      <!-- checkmark <td id="81"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcooking" id="9">Loading</td>
-      <td id="52"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecooking" id="10">Loading</td>
-      <td id="62"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscooking" id="11">Loading</td>
-      <td id="72"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecooking" id="12">Loading</td>
-      <td id="82"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcooking" id="9" onclick="toggleVisible(9,'momcooking')">Loading</td>
+      <!-- checkmark <td id="52"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecooking" id="10" onclick="toggleVisible(10,'robbiecooking')">Loading</td>
+      <!-- checkmark <td id="62"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscooking" id="11" onclick="toggleVisible(11,'chriscooking')">Loading</td>
+      <!-- checkmark <td id="72"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecooking" id="12" onclick="toggleVisible(12,'josiecooking')">Loading</td>
+      <!-- checkmark <td id="82"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcleaning" id="24">Bedroom</td>
-      <td id="53"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecleaning" id="25">Bedroom</td>
-      <td id="63"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscleaning" id="26">Bedroom</td>
-      <td id="73"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecleaning" id="27">Bedroom</td>
-      <td id="83"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcleaning" id="24" onclick="toggleVisible(24,'momcleaning')">Bedroom</td>
+      <!-- checkmark <td id="53"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecleaning" id="25" onclick="toggleVisible(25,'robbiecleaning')">Bedroom</td>
+      <!-- checkmark <td id="63"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscleaning" id="26" onclick="toggleVisible(26,'chriscleaning')">Bedroom</td>
+      <!-- checkmark <td id="73"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecleaning" id="27" onclick="toggleVisible(27,'josiecleaning')">Bedroom</td>
+      <!-- checkmark <td id="83"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcleaning" id="28">Laundry Room</td>
-      <td id="54"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecleaning" id="29">Upstairs Bathroom</td>
-      <td id="64"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscleaning" id="30">Entry and Stairs</td>
-      <td id="74"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecleaning" id="31">Downstairs Bathroom</td>
-      <td id="84"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+
+      <td class="momcleaning" id="28" onclick="toggleVisible(28,'momcleaning')">Laundry Room</td>
+      <!-- checkmark <td id="54"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecleaning" id="29" onclick="toggleVisible(29,'robbiecleaning')">Upstairs Bathroom</td>
+      <!-- checkmark <td id="64"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscleaning" id="30" onclick="toggleVisible(30,'chriscleaning')">Entry and Stairs</td>
+      <!-- checkmark <td id="74"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecleaning" id="31" onclick="toggleVisible(31,'josiecleaning')">Downstairs Bathroom</td>
+      <!-- checkmark <td id="84"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcleaning" id="13">Loading</td>
-      <td id="55"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecleaning" id="14">Loading</td>
-      <td id="65"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscleaning" id="15">Loading</td>
-      <td id="75"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecleaning" id="16">Loading</td>
-      <td id="85"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcleaning" id="13" onclick="toggleVisible(13,'momcleaning')">Loading</td>
+      <!-- checkmark <td id="55"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecleaning" id="14" onclick="toggleVisible(14,'robbiecleaning')">Loading</td>
+      <!-- checkmark <td id="65"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscleaning" id="15" onclick="toggleVisible(15,'chriscleaning')">Loading</td>
+      <!-- checkmark <td id="75"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecleaning" id="16" onclick="toggleVisible(16,'josiecleaning')">Loading</td>
+      <!-- checkmark <td id="85"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcleaning" id="32">Porch</td>
-      <td id="56"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecleaning" id="17">Loading</td>
-      <td id="66"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscleaning" id="18">Loading</td>
-      <td id="76"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecleaning" id="19">Loading</td>
-      <td id="86"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcleaning" id="32" onclick="toggleVisible(32,'momcleaning')">Porch</td>
+      <!-- checkmark <td id="56"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecleaning" id="17" onclick="toggleVisible(17,'robbiecleaning')">Loading</td>
+      <!-- checkmark <td id="66"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscleaning" id="18" onclick="toggleVisible(18,'chriscleaning')">Loading</td>
+      <!-- checkmark <td id="76"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecleaning" id="19" onclick="toggleVisible(19,'josiecleaning')">Loading</td>
+      <!-- checkmark <td id="86"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcleaning" id="testa">Loading</td>
-      <td id="57"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecleaning" id="testb">Loading</td>
-      <td id="67"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscleaning" id="testc">Loading</td>
-      <td id="77"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecleaning" id="testd">Loading</td>
-      <td id="87"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcleaning" id="testa" onclick="toggleVisible('testa','momcleaning')">Loading</td>
+      <!-- checkmark <td id="57"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecleaning" id="testb" onclick="toggleVisible('testb','robbiecleaning')">Loading</td>
+      <!-- checkmark <td id="67"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscleaning" id="testc" onclick="toggleVisible('testc','chriscleaning')">Loading</td>
+      <!-- checkmark <td id="77"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecleaning" id="testd" onclick="toggleVisible('testd','josiecleaning')">Loading</td>
+      <!-- checkmark <td id="87"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcleaning" id="laundrya">Practice Piano</td>
-      <td id="58"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecleaning" id="37">Practice Piano</td>
-      <td id="68"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscleaning" id="38">Practice Piano</td>
-      <td id="78"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecleaning" id="39">Practice Piano</td>
-      <td id="88"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcleaning" id="laundrya" onclick="toggleVisible('laundrya','momcleaning')">Practice Piano</td>
+      <!-- checkmark <td id="58"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecleaning" id="37" onclick="toggleVisible(37,'robbiecleaning')">Practice Piano</td>
+      <!-- checkmark <td id="68"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscleaning" id="38" onclick="toggleVisible(38,'chriscleaning')">Practice Piano</td>
+      <!-- checkmark <td id="78"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecleaning" id="39" onclick="toggleVisible(39,'josiecleaning')">Practice Piano</td>
+      <!-- checkmark <td id="88"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcleaning" id="36">Fold 20 Things</td>
-      <td id="59"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecleaning" id="laundryb">Fold 20 Things</td>
-      <td id="69"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscleaning" id="laundryc">Fold 20 Things</td>
-      <td id="79"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecleaning" id="laundryd">Fold 20 Things</td>
-      <td id="89"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcleaning" id="36" onclick="toggleVisible(36,'momcleaning')">Fold 20 Things</td>
+      <!-- checkmark <td id="59"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecleaning" id="laundryb" onclick="toggleVisible('laundryb','robbiecleaning')">Fold 20 Things</td>
+      <!-- checkmark <td id="69"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscleaning" id="laundryc" onclick="toggleVisible('laundryc','chriscleaning')">Fold 20 Things</td>
+      <!-- checkmark <td id="79"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecleaning" id="laundryd" onclick="toggleVisible('laundryd','josiecleaning')">Fold 20 Things</td>
+      <!-- checkmark <td id="89"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
     <tr>
-      <td class="momcleaning" id="weedsa">Pull Weeds</td>
-      <td id="59b"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="robbiecleaning" id="weedsb">Pull Weeds</td>
-      <td id="69b"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="chriscleaning" id="weedsc">Pull Weeds</td>
-      <td id="79b"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
-      <td class="josiecleaning" id="weedsd">Pull Weeds</td>
-      <td id="89b"><input type="checkbox" class="regular-checkbox"></input>
-      </td>
+      <td class="momcleaning" id="weedsa" onclick="toggleVisible('weedsa','momcleaning')">Pull Weeds</td>
+      <!-- checkmark <td id="59b"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="robbiecleaning" id="weedsb" onclick="toggleVisible('weedsb','robbiecleaning')">Pull Weeds</td>
+      <!-- checkmark <td id="69b"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="chriscleaning" id="weedsc" onclick="toggleVisible('weedsc','chriscleaning')">Pull Weeds</td>
+      <!-- checkmark <td id="79b"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
+      <td class="josiecleaning" id="weedsd" onclick="toggleVisible('weedsd','josiecleaning')">Pull Weeds</td>
+      <!-- checkmark <td id="89b"><input type="checkbox" class="regular-checkbox"></input>
+     </td> checkmark -->
     </tr>
   </table>
 </body>

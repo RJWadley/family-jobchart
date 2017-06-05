@@ -187,6 +187,12 @@ th {
   font-size: 3em;
   font-family: Verdana, Geneva, sans-serif;
   border: 1px solid black;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 td {
@@ -197,6 +203,17 @@ td {
   font-family: Verdana, Geneva, sans-serif;
   border: 1px solid black;
   background-color: #fafafa;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.5s ease-in-out;
+}
+
+td:hover {
+  text-shadow: 1px 1px 10px lightgray;
 }
 
 table, thead, tbody, th, td, tr {
@@ -260,6 +277,7 @@ table, thead, tbody, th, td, tr {
   border-radius: 3px;
   display: inline-block;
   position: relative;
+  margin-right: 15px;
 }
 
 .regular-checkbox:active, .regular-checkbox:checked:active {
@@ -274,12 +292,16 @@ table, thead, tbody, th, td, tr {
 }
 
 .regular-checkbox:checked:after {
-  content: '\2717';
+  content: '\2714';
   font-size: 14px;
   position: absolute;
   top: 0px;
   left: 3px;
   color: #99a1a7;
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 @media only screen and (max-width: 1024px) {
