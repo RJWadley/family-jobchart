@@ -4,6 +4,7 @@ window.onload = function() {
     function() {
       document.getElementById("body").className = "loaded"
     }, 2000);
+
 }
 
 function starter() {
@@ -172,6 +173,11 @@ function starter() {
     document.getElementById("weedsb").style.backgroundColor = "hsl(" + robbieCleaningColor + "," + colorSat + "%," + colorLight + "%)";
     document.getElementById("weedsc").style.backgroundColor = "hsl(" + chrisCleaningColor + "," + colorSat + "%," + colorLight + "%)";
     document.getElementById("weedsd").style.backgroundColor = "hsl(" + josieCleaningColor + "," + colorSat + "%," + colorLight + "%)";
+
+    document.getElementById("extraa").style.backgroundColor = "hsl(" + momCleaningColor + "," + colorSat + "%," + colorLight + "%)";
+    document.getElementById("extrab").style.backgroundColor = "hsl(" + robbieCleaningColor + "," + colorSat + "%," + colorLight + "%)";
+    document.getElementById("extrac").style.backgroundColor = "hsl(" + chrisCleaningColor + "," + colorSat + "%," + colorLight + "%)";
+    document.getElementById("extrad").style.backgroundColor = "hsl(" + josieCleaningColor + "," + colorSat + "%," + colorLight + "%)";
 
 
     i++;

@@ -26,9 +26,11 @@
 
       if (element.className != classIn + " done") {
         element.className = classIn + " done";
+        console.log(new Date);
         console.log("Element " + element.innerHTML + " has been crossed off. 😌");
       } else {
         element.className = classIn;
+        console.log(new Date);
         console.log("Element " + element.innerHTML + " has been uncrossed. ☹️");
         element.color = "black";
       }
@@ -37,9 +39,28 @@
 
     }
   </script>
+  <script>
+    function runScript(e) {
+      if (e.keyCode == 13) {
+        document.getElementById("texta").blur();
+
+        document.getElementById("textb").blur();
+
+        document.getElementById("textc").blur();
+
+        document.getElementById("textd").blur();
+
+        console.log(new Date);
+        console.log("Custom job updated");
+
+      }
+    }
+  </script>
+
 </head>
 
 <body id="body" class="">
+
   <script language="JavaScript">
     window.onbeforeunload = confirmExit;
 
@@ -64,22 +85,19 @@
       <th class="chris" id="22">Chris</th>
       <th class="josie" id="23">Josie</th>
     </tr>
-    <tr id="tip">
-      <td colspan=4 style="font-size:1em" onclick="document.getElementById('tip').style.display = 'none';">Click items to cross them off! Click this tip to make it disappear.
-    </tr>
-    <tr>
-      <td class="momcooking" id="1" onclick="toggleVisible(1,'momcooking')">Loading
-      </td>
-      <!-- checkmark <td id="50"><input type="checkbox" class="regular-checkbox"></input>
+
+    <td class="momcooking" id="1" onclick="toggleVisible(1,'momcooking')">Loading
+    </td>
+    <!-- checkmark <td id="50"><input type="checkbox" class="regular-checkbox"></input>
      </td> checkmark -->
-      <td class="robbiecooking" id="2" onclick="toggleVisible(2,'robbiecooking')">Loading</td>
-      <!-- checkmark <td id="60"><input type="checkbox" class="regular-checkbox"></input>
+    <td class="robbiecooking" id="2" onclick="toggleVisible(2,'robbiecooking')">Loading</td>
+    <!-- checkmark <td id="60"><input type="checkbox" class="regular-checkbox"></input>
      </td> checkmark -->
-      <td class="chriscooking" id="3" onclick="toggleVisible(3,'chriscooking')">Loading</td>
-      <!-- checkmark <td id="70"><input type="checkbox" class="regular-checkbox"></input>
+    <td class="chriscooking" id="3" onclick="toggleVisible(3,'chriscooking')">Loading</td>
+    <!-- checkmark <td id="70"><input type="checkbox" class="regular-checkbox"></input>
      </td> checkmark -->
-      <td class="josiecooking" id="4" onclick="toggleVisible(4,'josiecooking')">Loading</td>
-      <!-- checkmark <td id="80"><input type="checkbox" class="regular-checkbox"></input>
+    <td class="josiecooking" id="4" onclick="toggleVisible(4,'josiecooking')">Loading</td>
+    <!-- checkmark <td id="80"><input type="checkbox" class="regular-checkbox"></input>
      </td> checkmark -->
     </tr>
     <tr>
@@ -223,6 +241,15 @@
       <!-- checkmark <td id="89b"><input type="checkbox" class="regular-checkbox"></input>
      </td> checkmark -->
     </tr>
+
+    <tr>
+      <td id="extraa"><input type="text" id="texta" class="textbox momcleaning" placeholder="Put extra jobs here!" onkeypress="return runScript(event)"></td>
+      <td id="extrab"><input type="text" id="textb" class="textbox robbiecleaning" placeholder="Put extra jobs here!" onkeypress="return runScript(event)"></td>
+      <td id="extrac"><input type="text" id="textc" class="textbox chriscleaning" placeholder="Put extra jobs here!" onkeypress="return runScript(event)"></td>
+      <td id="extrad"><input type="text" id="textd" class="textbox josiecleaning" placeholder="Put extra jobs here!" onkeypress="return runScript(event)"></td>
+    </tr>
+
+
   </table>
 </body>
 
